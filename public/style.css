@@ -1,0 +1,52 @@
+#root {
+    min-height: 100vh;
+}
+
+.error {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-transform:uppercase;
+}
+
+.error p {
+    text-transform: none;
+}
+
+.card {
+    width: 30%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    max-height: 20vw;
+    min-height: 280px;
+    background-size: cover;
+    background-position: center
+}
+
+@media only screen and (max-width: 1140px) {
+    .card {
+        width: 48%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .card {
+        margin: auto;
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .card {
+        margin: auto;
+        width: 90%;
+    }
+}
