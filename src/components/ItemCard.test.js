@@ -56,12 +56,12 @@ test('background img links warks properly', () => {
         }; 
         render(<ItemCard article = {data} />, container);  });
     const img = container.getElementsByClassName('card-img-top')[0];
-    expect(img.getAttribute('style')).toBe('background-image: url(http://randomimg.jpg);');
+    expect(img.getAttribute('style')).toBe('background-image: url(http://randomimg-440x280.jpg);');
     act(() => {
         const data = {
             thumb:'http://randomimg2.jpg' 
         }; 
         render(<ItemCard article = {data} />, container);  });
     const img2 = container.getElementsByClassName('card-img-top')[0];
-    expect(img2.getAttribute('style')).toBe('background-image: url(http://randomimg2.jpg);');
+    expect(img2.getAttribute('style')).toBe('background-image: url(http://randomimg2-440x280.jpg);');
 });
