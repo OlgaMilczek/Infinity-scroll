@@ -60,7 +60,7 @@ function App() {
             <div className='error'>
                 <h1>Sorry, an error occurred...</h1>
                 <h2>Please try again later</h2>
-                <p className='text-danger'>{errorMessage.toString()}</p>
+                <p className='text-danger'>{errorMessage.message}</p>
             </div>
         );
     }
