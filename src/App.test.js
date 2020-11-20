@@ -20,7 +20,7 @@ test('renders no more articles message for empty data', async () => {
 
 test('renders error when fetch fails', async () => {
     const fakeErrorMsg = 'A fake error occurred';
-    jest.spyOn(global, 'fetch').mockImplementation(() => Promise.reject(fakeErrorMsg));
+    jest.spyOn(global, 'fetch').mockImplementation(() => Promise.reject(Error(fakeErrorMsg)));
     await act(async () => {  
         const { container, unmount } = render(<App/>);
         await waitFor(() => expect(container).toHaveTextContent('Sorry, an error occurred...'));

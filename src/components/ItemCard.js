@@ -6,13 +6,16 @@ function ItemCard(props) {
     It's takes single object from API as the props. */
     let smallImageURL;
     let imgURL = props.article.thumb;
-
-    if (imgURL.endsWith('.jpg')){
-        smallImageURL= imgURL.replace('.jpg', '-440x280.jpg');
-    } else if (imgURL.endsWith('.png')) {
-        smallImageURL= imgURL.replace('.png', '-440x280.png');
-    } else if(imgURL.endsWith('.jpeg')) {
-        smallImageURL= imgURL.replace('.jpeg', '-440x280.jpeg');
+    if (imgURL) {
+        if (imgURL.endsWith('.jpg')){
+            smallImageURL= imgURL.replace('.jpg', '-440x280.jpg');
+        } else if (imgURL.endsWith('.png')) {
+            smallImageURL= imgURL.replace('.png', '-440x280.png');
+        } else if(imgURL.endsWith('.jpeg')) {
+            smallImageURL= imgURL.replace('.jpeg', '-440x280.jpeg');
+        } else {
+            smallImageURL = imgURL;
+        }
     }
     
     return (
